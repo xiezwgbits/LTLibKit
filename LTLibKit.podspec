@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "LTLibKit"
-  spec.version      = "3.0.1"
+  spec.version      = "3.0.2"
   spec.summary      = "LTLibKit is test cocoapods"
 
   # This description is used to generate tags and improve search results.
