@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "LTLibKit"
-  spec.version      = "3.0.4"
+  spec.version      = "3.0.5"
   spec.summary      = "LTLibKit is test cocoapods"
 
   # This description is used to generate tags and improve search results.
@@ -95,11 +95,11 @@ Pod::Spec.new do |spec|
 
   end
 
-  spec.subspec 'USE_FB_TT' do |use_fb_tt|
-    use_fb_tt.source_files = 'LTLibKit/USE_FB_TT/*'
-    use_fb_tt.resources = 'LTLibKit/USE_FB_TT/leitingbundle.bundle'
-    use_fb_tt.vendored_frameworks = 'LTLibKit/USE_FB_TT/leitinglib.framework'
-  end
+  #spec.subspec 'USE_FB_TT' do |use_fb_tt|
+    #use_fb_tt.source_files = 'LTLibKit/USE_FB_TT/*'
+    #use_fb_tt.resources = 'LTLibKit/USE_FB_TT/leitingbundle.bundle'
+    #use_fb_tt.vendored_frameworks = 'LTLibKit/USE_FB_TT/leitinglib.framework'
+  #end
 
 
   #spec.source_files  = "leitinglib.framework/Headers/*.{h}"
