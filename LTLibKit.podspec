@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "LTLibKit"
-  spec.version      = "3.0.7"
+  spec.version      = "3.0.8"
   spec.summary      = "LTLibKit is test cocoapods"
 
   # This description is used to generate tags and improve search results.
@@ -89,7 +89,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
   spec.subspec 'USE_FB' do |use_fb|
-    use_fb.source_files = 'LTLibKit/USE_FB/*'
+    use_fb.source_files = 'LTLibKit/USE_FB/leitinglib.framework/Headers/*.{h}'
     use_fb.resources = 'LTLibKit/USE_FB/leitingbundle.bundle'
     use_fb.vendored_frameworks = 'LTLibKit/USE_FB/leitinglib.framework'
     use_fb.frameworks = "MessageUI", "AudioToolbox","AVFoundation","EventKitUI","EventKit","MediaPlayer","StoreKit","AdSupport","GameKit","UIKit","Foundation","MapKit","iAd","CoreLocation","SystemConfiguration","WebKit","SafariServices","CoreTelephony","Accelerate"
