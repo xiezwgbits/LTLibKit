@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "LTLibKit"
-  spec.version      = "3.0.5"
+  spec.version      = "3.0.6"
   spec.summary      = "LTLibKit is test cocoapods"
 
   # This description is used to generate tags and improve search results.
@@ -92,14 +92,24 @@ Pod::Spec.new do |spec|
     use_fb.source_files = 'LTLibKit/USE_FB/*'
     use_fb.resources = 'LTLibKit/USE_FB/leitingbundle.bundle'
     use_fb.vendored_frameworks = 'LTLibKit/USE_FB/leitinglib.framework'
+    use_fb.frameworks = "MessageUI", "AudioToolbox","AVFoundation","EventKitUI","EventKit","MediaPlayer","StoreKit","AdSupport","GameKit","UIKit","Foundation","MapKit","iAd","CoreLocation","SystemConfiguration","WebKit","SafariServices","CoreTelephony","Accelerate"
+    use_fb.libraries = "sqlite3", "z.1","c++"
+    use_fb.requires_arc = true
+    use_fb.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
+    use_fb.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64' }
 
   end
 
-  #spec.subspec 'USE_FB_TT' do |use_fb_tt|
-    #use_fb_tt.source_files = 'LTLibKit/USE_FB_TT/*'
-    #use_fb_tt.resources = 'LTLibKit/USE_FB_TT/leitingbundle.bundle'
-    #use_fb_tt.vendored_frameworks = 'LTLibKit/USE_FB_TT/leitinglib.framework'
-  #end
+  spec.subspec 'USE_FB_TT' do |use_fb_tt|
+    use_fb_tt.source_files = 'LTLibKit/USE_FB_TT/*'
+    use_fb_tt.resources = 'LTLibKit/USE_FB_TT/leitingbundle.bundle'
+    use_fb_tt.vendored_frameworks = 'LTLibKit/USE_FB_TT/leitinglib.framework'
+    use_fb_tt.frameworks = "MessageUI", "AudioToolbox","AVFoundation","EventKitUI","EventKit","MediaPlayer","StoreKit","AdSupport","GameKit","UIKit","Foundation","MapKit","iAd","CoreLocation","SystemConfiguration","WebKit","SafariServices","CoreTelephony","Accelerate"
+    use_fb_tt.libraries = "sqlite3", "z.1","c++"
+    use_fb_tt.requires_arc = true
+    use_fb_tt.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
+    use_fb_tt.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64' }
+  end
 
 
   #spec.source_files  = "leitinglib.framework/Headers/*.{h}"
@@ -137,10 +147,7 @@ Pod::Spec.new do |spec|
   # spec.libraries = "iconv", "xml2"
 
    # spec.framework  = "SomeFramework"
-  spec.frameworks = "MessageUI", "AudioToolbox","AVFoundation","EventKitUI","EventKit","MediaPlayer","StoreKit","AdSupport","GameKit","UIKit","Foundation","MapKit","iAd","CoreLocation","SystemConfiguration","WebKit","SafariServices","CoreTelephony","Accelerate"
-
-  # spec.library   = "iconv"
-  spec.libraries = "sqlite3", "z.1","c++"
+  
 
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -148,12 +155,6 @@ Pod::Spec.new do |spec|
   #  If your library depends on compiler flags you can set them in the xcconfig hash
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
-
-   spec.requires_arc = true
-
-   spec.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
-
-   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64' }
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
