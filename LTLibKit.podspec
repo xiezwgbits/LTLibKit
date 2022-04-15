@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "LTLibKit"
-  spec.version      = "3.0.6"
+  spec.version      = "3.0.7"
   spec.summary      = "LTLibKit is test cocoapods"
 
   # This description is used to generate tags and improve search results.
@@ -100,16 +100,16 @@ Pod::Spec.new do |spec|
 
   end
 
-  spec.subspec 'USE_FB_TT' do |use_fb_tt|
-    use_fb_tt.source_files = 'LTLibKit/USE_FB_TT/*'
-    use_fb_tt.resources = 'LTLibKit/USE_FB_TT/leitingbundle.bundle'
-    use_fb_tt.vendored_frameworks = 'LTLibKit/USE_FB_TT/leitinglib.framework'
-    use_fb_tt.frameworks = "MessageUI", "AudioToolbox","AVFoundation","EventKitUI","EventKit","MediaPlayer","StoreKit","AdSupport","GameKit","UIKit","Foundation","MapKit","iAd","CoreLocation","SystemConfiguration","WebKit","SafariServices","CoreTelephony","Accelerate"
-    use_fb_tt.libraries = "sqlite3", "z.1","c++"
-    use_fb_tt.requires_arc = true
-    use_fb_tt.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
-    use_fb_tt.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64' }
-  end
+  # spec.subspec 'USE_FB_TT' do |use_fb_tt|
+  #   use_fb_tt.source_files = 'LTLibKit/USE_FB_TT/*'
+  #   use_fb_tt.resources = 'LTLibKit/USE_FB_TT/leitingbundle.bundle'
+  #   use_fb_tt.vendored_frameworks = 'LTLibKit/USE_FB_TT/leitinglib.framework'
+  #   use_fb_tt.frameworks = "MessageUI", "AudioToolbox","AVFoundation","EventKitUI","EventKit","MediaPlayer","StoreKit","AdSupport","GameKit","UIKit","Foundation","MapKit","iAd","CoreLocation","SystemConfiguration","WebKit","SafariServices","CoreTelephony","Accelerate"
+  #   use_fb_tt.libraries = "sqlite3", "z.1","c++"
+  #   use_fb_tt.requires_arc = true
+  #   use_fb_tt.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-ObjC' }
+  #   use_fb_tt.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64' }
+  # end
 
 
   #spec.source_files  = "leitinglib.framework/Headers/*.{h}"
