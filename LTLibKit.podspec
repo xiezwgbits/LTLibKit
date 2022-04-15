@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "LTLibKit"
-  spec.version      = "3.0.2"
+  spec.version      = "3.0.3"
   spec.summary      = "LTLibKit is test cocoapods"
 
   # This description is used to generate tags and improve search results.
@@ -88,8 +88,21 @@ Pod::Spec.new do |spec|
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
+  spec.subspec 'USE_FB' do |a|
+    a.source_files = 'LTLibKit/USE_FB/*'
+    a.resources = 'LTLibKit/USE_FB/leitingbundle.bundle'
+    a.vendored_frameworks = 'LTLibKit/USE_FB/leitinglib.framework'
 
-  spec.source_files  = "leitinglib.framework/Headers/*.{h}"
+  end
+
+  spec.subspec 'USE_FB_TT' do |b|
+    a.source_files = 'LTLibKit/USE_FB_TT/*'
+    a.resources = 'LTLibKit/USE_FB_TT/leitingbundle.bundle'
+    a.vendored_frameworks = 'LTLibKit/USE_FB_TT/leitinglib.framework'
+  end
+
+
+  #spec.source_files  = "leitinglib.framework/Headers/*.{h}"
   #spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
@@ -105,8 +118,8 @@ Pod::Spec.new do |spec|
 
   # spec.resource  = "icon.png"
   # spec.resources = "Resources/*.png"
-  spec.resources = "leitingbundle.bundle"
-  spec.vendored_frameworks = 'leitinglib.framework'
+  #spec.resources = "leitingbundle.bundle"
+  #spec.vendored_frameworks = 'leitinglib.framework'
 
   # spec.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
